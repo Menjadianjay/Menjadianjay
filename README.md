@@ -42,7 +42,7 @@
 
 ###
 
-<img align="left" height="150" src="https://media.giphy.com/media/M0C1x0a4yP2uI/giphy.gif?cid=790b7611nsf5rpmwau0fc5tnov746mmr2gaze6hg63tqo3zx&ep=v1_gifs_search&rid=giphy.gif&ct=g"  />
+<img align="center" height="150" src="https://media.giphy.com/media/M0C1x0a4yP2uI/giphy.gif?cid=790b7611nsf5rpmwau0fc5tnov746mmr2gaze6hg63tqo3zx&ep=v1_gifs_search&rid=giphy.gif&ct=g"  />
 
 ###
 
