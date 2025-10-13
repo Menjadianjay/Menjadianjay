@@ -1,7 +1,7 @@
 <h1 align="center">Hi gengss, I am Rio De Ornay</h1>
 <h3 align="center">A passionate newbie from East Nusa Tenggara.</h3>
 
-- 🔭 I’m currently working on **Simple Object Counting Using CNN**
+- 🔭 I’m currently working on **ASR using Javanese and Sundanese Audio*
 
 - 📫 How to reach me **rio8i2004@gmail.com**
 
