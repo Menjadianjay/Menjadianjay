@@ -5,7 +5,7 @@
 
 - 📫 How to reach me **rio8i2004@gmail.com**
 
-- ⚡ Fun fact **I love RnB**
+- Fun fact **I love OREOS, RnB, and DONUTS**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
