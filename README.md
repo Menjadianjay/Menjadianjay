@@ -2,7 +2,7 @@
 
 # `Rio De Ornay`
 
-**ML Engineer · Web Developer · Newbie from East Nusa Tenggara 🌴**
+** Newbie from East Nusa Tenggara 🌴**
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
 
@@ -39,20 +39,6 @@
 
 ---
 
-### 📊 GitHub Stats
-
-<div align="center">
-
-![Rio's GitHub Stats](https://github-readme-stats.vercel.app/api?username=rionewbieiseng2&show_icons=true&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&icon_color=4ecdc4&text_color=f0ece3)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rionewbieiseng2&layout=compact&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&text_color=f0ece3)
-
-![GitHub Streak](https://streak-stats.demolab.com?user=rionewbieiseng2&theme=dark&hide_border=true&background=0d0d0d&ring=F5A623&fire=e94e77&currStreakLabel=4ecdc4)
-
-</div>
-
----
-
 ### 🎯 Fun Facts
 
 | 🍪 | 🍩 | 🎵 |
@@ -72,11 +58,6 @@
 </div>
 
 ---
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=rionewbieiseng2&style=for-the-badge&color=F5A623&label=PROFILE+VIEWS" />
-</div>
-
 <div align="center">
   <sub>Newbie from NTT · Building cool things one commit at a time 🚀</sub>
 </div>
