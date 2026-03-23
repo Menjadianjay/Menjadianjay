@@ -1,135 +1,82 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rio De Ornay — Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg:#0d0d0d;--card:#161616;--accent:#f5a623;--accent2:#e94e77;--accent3:#4ecdc4;
-      --text:#f0ece3;--muted:#888;--border:#2a2a2a;
-    }
-    body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;padding:0}
-    .wrap{max-width:680px;margin:0 auto;padding:2rem 1.5rem}
+<div align="center">
 
-    .header{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;margin-bottom:2.5rem;border-bottom:1px solid var(--border);padding-bottom:2rem}
-    .name{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-1px;background:linear-gradient(135deg,var(--text) 40%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .title{font-size:0.7rem;color:var(--accent3);letter-spacing:3px;text-transform:uppercase;margin-top:6px;font-family:'Space Mono',monospace}
-    .origin{font-size:0.7rem;color:var(--muted);margin-top:4px}
-    .status-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-align:right;min-width:160px}
-    .status-dot{display:inline-block;width:7px;height:7px;background:#4ade80;border-radius:50%;margin-right:6px;animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-    .status-label{font-size:0.65rem;color:var(--accent3)}
-    .status-val{font-size:0.7rem;color:var(--muted);margin-top:4px}
+# `Rio De Ornay`
 
-    .section-label{font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'Syne',sans-serif}
+**ML Engineer · Web Developer · Newbie from East Nusa Tenggara 🌴**
 
-    .project-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden}
-    .project-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent)}
-    .project-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text)}
-    .project-desc{font-size:0.72rem;color:var(--muted);margin-top:6px;line-height:1.6}
-    .project-tag{display:inline-block;background:#1f1f1f;border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:0.6rem;color:var(--accent);margin-top:8px;margin-right:4px;letter-spacing:1px}
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
 
-    .facts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem}
-    .fact{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center}
-    .fact-icon{font-size:1.2rem;margin-bottom:6px}
-    .fact-label{font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:2px}
-
-    .tools-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem}
-    .tool-chip{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:0.68rem;color:var(--text);font-family:'Syne',sans-serif;font-weight:700;letter-spacing:0.5px;transition:border-color 0.2s,color 0.2s;cursor:default}
-    .tool-chip:hover{border-color:var(--accent2);color:var(--accent2)}
-    .tool-chip.ai{border-color:#333;color:var(--accent3)}
-    .tool-chip.web{border-color:#333;color:var(--accent)}
-
-    .contacts{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2rem}
-    .contact-pill{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-size:0.7rem;color:var(--muted);cursor:pointer;transition:all 0.2s}
-    .contact-pill:hover{border-color:var(--accent2);color:var(--accent2)}
-    .pill-icon{width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;background:#1f1f1f}
-
-    .footer{border-top:1px solid var(--border);padding-top:1rem;display:flex;justify-content:space-between;align-items:center}
-    .footer-text{font-size:0.62rem;color:var(--muted)}
-    .footer-accent{color:var(--accent);font-weight:700}
-  </style>
-</head>
-<body>
-<div class="wrap">
-  <div class="header">
-    <div>
-      <div class="name">Rio De Ornay</div>
-      <div class="title">// ML Engineer · Web Dev</div>
-      <div class="origin">East Nusa Tenggara, Indonesia</div>
-    </div>
-    <div class="status-badge">
-      <div><span class="status-dot"></span><span class="status-label">Active</span></div>
-      <div class="status-val" style="font-size:0.6rem;margin-top:6px">@apriliodeornay</div>
-    </div>
-  </div>
-
-  <div class="section-label">// Current project</div>
-  <div class="project-card">
-    <div class="project-title">ASR · Javanese Audio</div>
-    <div class="project-desc">Building an Automatic Speech Recognition system for Javanese language — bridging NLP and low-resource language preservation.</div>
-    <span class="project-tag">PyTorch</span>
-    <span class="project-tag">TensorFlow</span>
-    <span class="project-tag">OpenCV</span>
-    <span class="project-tag">Scikit-learn</span>
-  </div>
-
-  <div class="section-label">// Fun facts</div>
-  <div class="facts">
-    <div class="fact">
-      <div class="fact-icon">🍪</div>
-      <div class="fact-label">Oreos</div>
-    </div>
-    <div class="fact">
-      <div class="fact-icon">🍩</div>
-      <div class="fact-label">Donuts</div>
-    </div>
-    <div class="fact">
-      <div class="fact-icon">🎵</div>
-      <div class="fact-label">RnB</div>
-    </div>
-  </div>
-
-  <div class="section-label">// Stack</div>
-  <div class="tools-grid">
-    <span class="tool-chip ai">Python</span>
-    <span class="tool-chip ai">PyTorch</span>
-    <span class="tool-chip ai">TensorFlow</span>
-    <span class="tool-chip ai">Scikit-learn</span>
-    <span class="tool-chip ai">Pandas</span>
-    <span class="tool-chip ai">Seaborn</span>
-    <span class="tool-chip ai">OpenCV</span>
-    <span class="tool-chip web">HTML5</span>
-    <span class="tool-chip web">CSS3</span>
-    <span class="tool-chip web">Bootstrap</span>
-    <span class="tool-chip web">Laravel</span>
-    <span class="tool-chip">Java</span>
-    <span class="tool-chip">Git</span>
-  </div>
-
-  <div class="section-label">// Connect</div>
-  <div class="contacts">
-    <div class="contact-pill">
-      <div class="pill-icon">✉</div>
-      rio8i2004@gmail.com
-    </div>
-    <div class="contact-pill">
-      <div class="pill-icon">ig</div>
-      @apriliodeornay
-    </div>
-    <div class="contact-pill">
-      <div class="pill-icon">lc</div>
-      rionewbieiseng2
-    </div>
-  </div>
-
-  <div class="footer">
-    <span class="footer-text">Newbie from <span class="footer-accent">NTT</span> · Building cool things one commit at a time</span>
-    <span class="footer-text" style="color:#333">v2025</span>
-  </div>
 </div>
-</body>
-</html>
+
+---
+
+### 🔭 Currently Working On
+
+> **ASR using Javanese Audio** — Automatic Speech Recognition for low-resource language preservation, combining NLP and deep learning.
+
+---
+
+### 🧠 Tech Stack
+
+**AI / ML**
+
+![Python](https://img.shields.io/badge/Python-0d0d0d?style=for-the-badge&logo=python&logoColor=F5A623)
+![PyTorch](https://img.shields.io/badge/PyTorch-0d0d0d?style=for-the-badge&logo=pytorch&logoColor=EE4C2C)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-0d0d0d?style=for-the-badge&logo=tensorflow&logoColor=FF6F00)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0d0d0d?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
+![Pandas](https://img.shields.io/badge/Pandas-0d0d0d?style=for-the-badge&logo=pandas&logoColor=150458)
+![Seaborn](https://img.shields.io/badge/Seaborn-0d0d0d?style=for-the-badge&logo=python&logoColor=4ecdc4)
+![OpenCV](https://img.shields.io/badge/OpenCV-0d0d0d?style=for-the-badge&logo=opencv&logoColor=5C3EE8)
+
+**Web Dev**
+
+![HTML5](https://img.shields.io/badge/HTML5-0d0d0d?style=for-the-badge&logo=html5&logoColor=E34F26)
+![CSS3](https://img.shields.io/badge/CSS3-0d0d0d?style=for-the-badge&logo=css3&logoColor=1572B6)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-0d0d0d?style=for-the-badge&logo=bootstrap&logoColor=7952B3)
+![Laravel](https://img.shields.io/badge/Laravel-0d0d0d?style=for-the-badge&logo=laravel&logoColor=FF2D20)
+![Java](https://img.shields.io/badge/Java-0d0d0d?style=for-the-badge&logo=openjdk&logoColor=ED8B00)
+![Git](https://img.shields.io/badge/Git-0d0d0d?style=for-the-badge&logo=git&logoColor=F05032)
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+
+![Rio's GitHub Stats](https://github-readme-stats.vercel.app/api?username=rionewbieiseng2&show_icons=true&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&icon_color=4ecdc4&text_color=f0ece3)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rionewbieiseng2&layout=compact&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&text_color=f0ece3)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=rionewbieiseng2&theme=dark&hide_border=true&background=0d0d0d&ring=F5A623&fire=e94e77&currStreakLabel=4ecdc4)
+
+</div>
+
+---
+
+### 🎯 Fun Facts
+
+| 🍪 | 🍩 | 🎵 |
+|:---:|:---:|:---:|
+| **Oreos** | **Donuts** | **RnB** |
+
+---
+
+### 📫 Connect With Me
+
+<div align="center">
+
+[![Gmail](https://img.shields.io/badge/rio8i2004@gmail.com-0d0d0d?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:rio8i2004@gmail.com)
+[![Instagram](https://img.shields.io/badge/@apriliodeornay-0d0d0d?style=for-the-badge&logo=instagram&logoColor=E4405F)](https://instagram.com/apriliodeornay)
+[![LeetCode](https://img.shields.io/badge/rionewbieiseng2-0d0d0d?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/rionewbieiseng2)
+
+</div>
+
+---
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=rionewbieiseng2&style=for-the-badge&color=F5A623&label=PROFILE+VIEWS" />
+</div>
+
+<div align="center">
+  <sub>Newbie from NTT · Building cool things one commit at a time 🚀</sub>
+</div>
