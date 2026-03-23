@@ -2,7 +2,7 @@
 
 # `Rio De Ornay`
 
-** Newbie from East Nusa Tenggara 🌴**
+### Newbie from East Nusa Tenggara 🌴
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
 
