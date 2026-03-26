@@ -27,6 +27,8 @@
 ![Pandas](https://img.shields.io/badge/Pandas-0d0d0d?style=for-the-badge&logo=pandas&logoColor=150458)
 ![Seaborn](https://img.shields.io/badge/Seaborn-0d0d0d?style=for-the-badge&logo=python&logoColor=4ecdc4)
 ![OpenCV](https://img.shields.io/badge/OpenCV-0d0d0d?style=for-the-badge&logo=opencv&logoColor=5C3EE8)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-0d0d0d?style=for-the-badge&logo=python&logoColor=11557c)
+![Librosa](https://img.shields.io/badge/Librosa-0d0d0d?style=for-the-badge&logo=python&logoColor=FF6B6B)
 
 **Web Dev**
 
