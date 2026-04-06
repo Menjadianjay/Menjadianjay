@@ -61,5 +61,5 @@
 
 ---
 <div align="center">
-  <sub>Newbie from NTT · Building cool things one commit at a time 🚀</sub>
+  <sub>Newbie from planet of Oreos</sub>
 </div>
