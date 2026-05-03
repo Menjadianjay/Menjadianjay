@@ -113,5 +113,5 @@
 ---
 
 <div align="center">
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos+%F0%9F%AA%90;and+Donuts+%F0%9F%8D%A9+that+rhymes+with+RnB+%F0%9F%8E%B5)](https://git.io/typing-svg)
+  https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos+%F0%9F%AA%90;and+Donuts+%F0%9F%8D%A9+that+rhymes+with+RnB+%F0%9F%8E%B5
 </div>
