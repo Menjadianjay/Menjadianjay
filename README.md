@@ -2,7 +2,9 @@
 
 # `Rio De Ornay`
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;SAP+ERP+%7C+Business+Process+Analysis;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos+%F0%9F%AA%90;and+Donuts+%F0%9F%8D%A9+that+rhymes+with+RnB+%F0%9F%8E%B5)](https://git.io/typing-svg)
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
 
 </div>
 
@@ -110,8 +112,11 @@
 [![LeetCode](https://img.shields.io/badge/rionewbieiseng2-0d0d0d?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/rionewbieiseng2)
 
 </div>
+
 ---
 
 <div align="center">
-  https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos+%F0%9F%AA%90;and+Donuts+%F0%9F%8D%A9+that+rhymes+with+RnB+%F0%9F%8E%B5
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos+%F0%9F%AA%90;and+Donuts+%F0%9F%8D%A9+that+rhymes+with+RnB+%F0%9F%8E%B5)](https://git.io/typing-svg)
+
 </div>
