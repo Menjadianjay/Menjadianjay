@@ -1,7 +1,8 @@
 <div align="center">
 
 # `Rio De Ornay`
-### Newbie from planet of Oreos and Donuts that ryhmes with RNB
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos+%F0%9F%AA%90;and+Donuts+%F0%9F%8D%A9+that+rhymes+with+RnB+%F0%9F%8E%B5)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;SAP+ERP+%7C+Business+Process+Analysis;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
 
@@ -68,6 +69,9 @@
 ![torchaudio](https://img.shields.io/badge/torchaudio-0d0d0d?style=for-the-badge&logo=pytorch&logoColor=EE4C2C)
 ![SpeechBrain](https://img.shields.io/badge/SpeechBrain-0d0d0d?style=for-the-badge&logo=python&logoColor=4B8BBE)
 ![NLTK](https://img.shields.io/badge/NLTK-0d0d0d?style=for-the-badge&logo=python&logoColor=F5A623)
+![spaCy](https://img.shields.io/badge/spaCy-0d0d0d?style=for-the-badge&logo=spacy&logoColor=09A3D5)
+![Gensim](https://img.shields.io/badge/Gensim-0d0d0d?style=for-the-badge&logo=python&logoColor=4B8BBE)
+![sentence-transformers](https://img.shields.io/badge/Sentence%20Transformers-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![datasets](https://img.shields.io/badge/Datasets-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![evaluate](https://img.shields.io/badge/Evaluate-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 
@@ -92,13 +96,11 @@
 ---
 
 ### 🎯 Fun Facts
-<div align="center">
 
 | 🍪 | 🍩 | 🎵 |
 |:---:|:---:|:---:|
 | **Oreos** | **Donuts** | **RnB** |
 
-</div>
 ---
 
 ### 📫 Connect With Me
