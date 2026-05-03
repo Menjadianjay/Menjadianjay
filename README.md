@@ -1,17 +1,15 @@
 <div align="center">
 
 # `Rio De Ornay`
-
 ### Newbie from planet of Oreos and Donuts that ryhmes with RNB
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=500&lines=Building+ASR+for+Javanese+Language+%F0%9F%8E%99%EF%B8%8F;Machine+Learning+%7C+Web+Dev+%7C+NLP;SAP+ERP+%7C+Business+Process+Analysis;Oreos+%2B+Donuts+%2B+RnB+%3D+%E2%9D%A4%EF%B8%8F)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
 ### 🔭 Currently Working On
-
 > **ASR using Javanese Audio** — Automatic Speech Recognition for low-resource language preservation, combining NLP and deep learning.
 
 ---
@@ -30,6 +28,15 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-0d0d0d?style=for-the-badge&logo=python&logoColor=11557c)
 ![Librosa](https://img.shields.io/badge/Librosa-0d0d0d?style=for-the-badge&logo=python&logoColor=FF6B6B)
 
+**ASR / NLP**
+
+![Whisper](https://img.shields.io/badge/Whisper-0d0d0d?style=for-the-badge&logo=openai&logoColor=412991)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
+![Transformers](https://img.shields.io/badge/Transformers-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
+![Wav2Vec2](https://img.shields.io/badge/Wav2Vec2-0d0d0d?style=for-the-badge&logo=meta&logoColor=0467DF)
+![torchaudio](https://img.shields.io/badge/torchaudio-0d0d0d?style=for-the-badge&logo=pytorch&logoColor=EE4C2C)
+![SpeechBrain](https://img.shields.io/badge/SpeechBrain-0d0d0d?style=for-the-badge&logo=python&logoColor=4B8BBE)
+
 **Web Dev**
 
 ![HTML5](https://img.shields.io/badge/HTML5-0d0d0d?style=for-the-badge&logo=html5&logoColor=E34F26)
@@ -38,6 +45,15 @@
 ![Laravel](https://img.shields.io/badge/Laravel-0d0d0d?style=for-the-badge&logo=laravel&logoColor=FF2D20)
 ![Java](https://img.shields.io/badge/Java-0d0d0d?style=for-the-badge&logo=openjdk&logoColor=ED8B00)
 ![Git](https://img.shields.io/badge/Git-0d0d0d?style=for-the-badge&logo=git&logoColor=F05032)
+
+**ERP**
+
+![SAP ERP](https://img.shields.io/badge/SAP%20ERP-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
+![SAP MM](https://img.shields.io/badge/SAP%20MM-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
+![SAP SD](https://img.shields.io/badge/SAP%20SD-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
+![SAP PP](https://img.shields.io/badge/SAP%20PP-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
+![SAP FI](https://img.shields.io/badge/SAP%20FI-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
+![SAP CO](https://img.shields.io/badge/SAP%20CO-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
 
 ---
 
@@ -60,6 +76,7 @@
 </div>
 
 ---
+
 <div align="center">
   <sub>Newbie from planet of Oreos</sub>
 </div>
