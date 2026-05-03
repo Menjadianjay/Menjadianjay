@@ -68,9 +68,6 @@
 ![torchaudio](https://img.shields.io/badge/torchaudio-0d0d0d?style=for-the-badge&logo=pytorch&logoColor=EE4C2C)
 ![SpeechBrain](https://img.shields.io/badge/SpeechBrain-0d0d0d?style=for-the-badge&logo=python&logoColor=4B8BBE)
 ![NLTK](https://img.shields.io/badge/NLTK-0d0d0d?style=for-the-badge&logo=python&logoColor=F5A623)
-![spaCy](https://img.shields.io/badge/spaCy-0d0d0d?style=for-the-badge&logo=spacy&logoColor=09A3D5)
-![Gensim](https://img.shields.io/badge/Gensim-0d0d0d?style=for-the-badge&logo=python&logoColor=4B8BBE)
-![sentence-transformers](https://img.shields.io/badge/Sentence%20Transformers-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![datasets](https://img.shields.io/badge/Datasets-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![evaluate](https://img.shields.io/badge/Evaluate-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 
