@@ -2,7 +2,7 @@
 
 # Hi, I'm Rio
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=550&lines=Building+ASR+for+Javanese+Language;Machine+Learning+%7C+Web+Dev+%7C+NLP;Oreos+%2B+Donuts+%2B+RnB)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=550&lines=Building+and+Compounding;Oreos+%2B+Donuts+%2B+RnB)](https://git.io/typing-svg)
 
 <img src="https://komarev.com/ghpvc/?username=IYOUUUKKK&color=f5a623&style=flat-square&label=Profile+Views" alt="Profile views" />
 
@@ -145,15 +145,12 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=IYOUUUKKK&show_icons=true&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&icon_color=F5A623" alt="GitHub Stats" height="165" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=IYOUUUKKK&theme=dark&hide_border=true&background=0d0d0d&ring=F5A623&fire=F5A623&currStreakLabel=F5A623" alt="GitHub Streak" height="165" />
+<img src="https://github-readme-stats.vercel.app/api?username=Menjadianjay&show_icons=true&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&icon_color=F5A623" alt="GitHub Stats" height="165" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Menjadianjay&theme=dark&hide_border=true&background=0d0d0d&ring=F5A623&fire=F5A623&currStreakLabel=F5A623" alt="GitHub Streak" height="165" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=IYOUUUKKK&layout=compact&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&langs_count=8" alt="Top Languages" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Menjadianjay&layout=compact&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=F5A623&langs_count=8" alt="Top Languages" height="165" />
 
 </div>
-
-> Swap in your real username if `IYOUUUKKK` isn't your GitHub handle — these stat cards read directly from it.
-
 <br>
 
 ## Fun Facts
