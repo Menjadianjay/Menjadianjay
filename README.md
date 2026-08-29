@@ -139,10 +139,13 @@
 
 <br>
 
-## GitHub Stats
+## GitHub Contribution Snake
 
 <div align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Menjadianjay&theme=dark&hide_border=true&background=0d0d0d&ring=F5A623&fire=F5A623&currStreakLabel=F5A623" alt="GitHub Streak" height="165" />
+
+![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
+![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake.svg#gh-light-mode-only)
+
 </div>
 <br>
 
