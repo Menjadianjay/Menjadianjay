@@ -143,10 +143,51 @@
 
 <div align="center">
 
-`![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)`
-`![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake.svg#gh-light-mode-only)`
+![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
+![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake.svg#gh-light-mode-only)
 
 </div>
+
+<details>
+<summary><b>Workflow used to generate this (.github/workflows/snake.yml)</b></summary>
+<br>
+
+```yaml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # runs once a day
+  workflow_dispatch: # lets you trigger it manually from the Actions tab
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate snake animation SVGs
+        uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: Menjadianjay
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push generated files to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+</details>
 <br>
 
 ## Fun Facts
