@@ -2,8 +2,7 @@
 
 # Hi, I'm Rio
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=550&lines=Building+and+Compounding;Oreos+%2B+Donuts+%2B+RnB)](https://git.io/typing-svg)
-
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=F5A623&center=true&vCenter=true&width=550&lines=Building+and+Compounding;Oreos+%2B+Donuts+%2B+RnB)
 
 </div>
 
@@ -173,6 +172,6 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos;and+Donuts+that+rhymes+with+RnB)](https://git.io/typing-svg)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=F5A623&center=true&vCenter=true&width=600&lines=Newbie+from+planet+of+Oreos;and+Donuts+that+rhymes+with+RnB)
 
 </div>
