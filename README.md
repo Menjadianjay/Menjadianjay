@@ -143,8 +143,8 @@
 
 <div align="center">
 
-![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
-![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake.svg#gh-light-mode-only)
+`![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)`
+`![Snake eating contribution graph](https://raw.githubusercontent.com/Menjadianjay/Menjadianjay/output/github-contribution-grid-snake.svg#gh-light-mode-only)`
 
 </div>
 <br>
