@@ -10,7 +10,9 @@
 
 ## Currently Building
 
-**ASR for Javanese Speech** — combining a Telegram bot with an interactive scrollytelling experience to make Automatic Speech Recognition for a low-resource language more accessible and engaging.
+**ASR for Javanese Speech** — combining a Telegram bot with an interactive scrollytelly experience to make Automatic Speech Recognition for a low-resource language more accessible and engaging.
+**International Trade & Export-Import Analysis** — studying global trade through import and export data, trade patterns, market dynamics, and the factors influencing international business.
+
 
 <br>
 
