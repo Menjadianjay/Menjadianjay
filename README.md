@@ -139,8 +139,16 @@
 ![SAP CO](https://img.shields.io/badge/SAP%20CO-0d0d0d?style=for-the-badge&logo=sap&logoColor=0FAAFF)
 
 </details>
-
+<details>
+<summary><b>Databases</b></summary>
 <br>
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0d0d0d?style=for-the-badge&logo=postgresql&logoColor=4169E1)
+![MySQL](https://img.shields.io/badge/MySQL-0d0d0d?style=for-the-badge&logo=mysql&logoColor=4479A1)
+![Supabase](https://img.shields.io/badge/Supabase-0d0d0d?style=for-the-badge&logo=supabase&logoColor=3FCF8E)
+![SQL](https://img.shields.io/badge/SQL-0d0d0d?style=for-the-badge&logo=postgresql&logoColor=F5A623)
+
+</details>
 
 ## GitHub Contribution Snake
 
