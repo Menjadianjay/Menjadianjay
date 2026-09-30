@@ -26,7 +26,7 @@
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-0d0d0d?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![Whisper](https://img.shields.io/badge/Whisper-0d0d0d?style=for-the-badge&logo=openai&logoColor=412991)
 ![OpenCV](https://img.shields.io/badge/OpenCV-0d0d0d?style=for-the-badge&logo=opencv&logoColor=5C3EE8)
-![Laravel](https://img.shields.io/badge/Laravel-0d0d0d?style=for-the-badge&logo=laravel&logoColor=FF2D20)
+![SQL](https://img.shields.io/badge/SQL-0d0d0d?style=for-the-badge&logo=postgresql&logoColor=F5A623)
 
 </div>
 
