@@ -40,13 +40,7 @@ I like turning messy data into data people can trust. In my projects I check the
 
 A PostgreSQL pipeline takes a flawed retail star schema (63,170 rows: 60,000 sales and four dimension tables) through four layers and publishes only data that passes its checks.
 
-```mermaid
-flowchart LR
-    A["<b>public</b><br/>source tables<br/>(from CSV)"] --> B["<b>staging</b><br/>etl.extract()<br/>plain copy"]
-    B --> C["<b>transformed</b><br/>etl.transform()<br/>fixes + quality gates"]
-    C --> D["<b>clean</b><br/>etl.load()<br/>PK, FK, CHECK constraints"]
-    R["<b>rule tables</b><br/>product_category_map<br/>quantity_rules<br/>pricing_rules<br/>decision_log"] --> C
-```
+**Pipeline:** `public` (source tables from CSV) → `staging` (etl.extract(), plain copy) → `transformed` (etl.transform(), fixes and quality gates) → `clean` (etl.load(), PK, FK and CHECK constraints). Rule tables (product_category_map, quantity_rules, pricing_rules, decision_log) feed the transform step.
 
 Each stage is a PL/pgSQL function. The whole run starts with one command, and database credentials are Docker secrets, not environment variables in git:
 
