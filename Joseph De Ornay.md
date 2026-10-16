@@ -1,181 +1,121 @@
-Data engineering portfolio · Yogyakarta, Indonesia (UTC+7)
+<h1 align="center">Joseph De Ornay</h1>
 
-# Joseph De Ornay
+<p align="center">
+  <b>I build data pipelines that stop when the data is wrong, and I write down why each rule exists.</b><br>
+  Informatics graduate, Sanata Dharma University (July 2026) · Yogyakarta, Indonesia (UTC+7)<br>
+  Looking for a data engineering internship
+</p>
 
-I build data pipelines that stop when the data is wrong, and I write down why each rule exists.
+<p align="center">
+  <a href="https://www.linkedin.com/in/joseph-aprillio-7i70a0a"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Joseph%20De%20Ornay-0A66C2?logo=linkedin&logoColor=white"></a>
+  <a href="https://medium.com/@josephAprillio"><img alt="Medium" src="https://img.shields.io/badge/Medium-Articles-000000?logo=medium&logoColor=white"></a>
+  <a href="mailto:josephdeornay@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-josephdeornay%40gmail.com-EA4335?logo=gmail&logoColor=white"></a>
+</p>
 
-Informatics graduate of Sanata Dharma University (July 2026), looking for a data engineering internship. Below are three projects, with the numbers behind each one.
+---
 
-[GitHub](https://github.com/Menjadianjay) [LinkedIn](https://www.linkedin.com/in/joseph-aprillio-7i70a0a) [Medium](https://medium.com/@josephAprillio) `josephdeornay@gmail.com`
+## About me
 
-[Retail ETL pipeline](#retail) [Javanese speech thesis](#speech) [Laundry system](#laundry) [Skills](#skills)
+I like turning messy data into data people can trust. In my projects I check the source first, count what is wrong, fix it with documented rules, and add checks that fail loudly instead of passing bad data along.
 
-Data engineering · team project
+- **Data engineering:** PostgreSQL ETL pipelines with staging layers and quality gates
+- **Machine learning:** a Javanese speech recognition thesis, evaluated with statistical tests
+- **Software:** a Laravel web application built with a team
+- **Teaching:** Teaching Assistant for Machine Learning and Object-Oriented Programming
+- **Learning next:** AWS, PySpark, Airflow
+
+## Projects
+
+| Project | What it is | Stack |
+|---|---|---|
+| [**Retail Analytics Platform**](#retail-analytics-platform) | A four-layer PostgreSQL ETL pipeline that publishes only data that passes its checks | PostgreSQL 16, PL/pgSQL, Python, Docker Compose |
+| [**Javanese speech recognition**](#javanese-speech-recognition-tdnn-vs-tdnn-f) | Bachelor's thesis comparing two acoustic models, TDNN and TDNN-F | Python, MFCC, Montreal Forced Aligner, N-gram LM |
+| [**Podomoro Laundry**](#podomoro-laundry-management-system) | A web application that replaced paper notes at a laundry business | Laravel 11, PHP 8.2, MySQL/SQLite, Tailwind CSS |
+
+---
 
 ## Retail Analytics Platform
 
-Jul – Oct 2026 Role: Data Engineer 101 of 104 commits [GitHub repository](https://github.com/Retail-Analytical-Platform/Retail-Analytics-Data)
+*Jul – Oct 2026 · Role: Data Engineer · 101 of 104 commits · [Repository](https://github.com/Retail-Analytical-Platform/Retail-Analytics-Data)*
 
-A PostgreSQL pipeline takes a flawed retail star schema of 63,170 rows through four layers and publishes only data that passes its checks.
+A PostgreSQL pipeline takes a flawed retail star schema (63,170 rows: 60,000 sales and four dimension tables) through four layers and publishes only data that passes its checks.
 
-### How the data moves
+```mermaid
+flowchart LR
+    A["<b>public</b><br/>source tables<br/>(from CSV)"] --> B["<b>staging</b><br/>etl.extract()<br/>plain copy"]
+    B --> C["<b>transformed</b><br/>etl.transform()<br/>fixes + quality gates"]
+    C --> D["<b>clean</b><br/>etl.load()<br/>PK, FK, CHECK constraints"]
+    R["<b>rule tables</b><br/>product_category_map<br/>quantity_rules<br/>pricing_rules<br/>decision_log"] --> C
+```
 
-public CSV load
+Each stage is a PL/pgSQL function. The whole run starts with one command, and database credentials are Docker secrets, not environment variables in git:
 
-**Source tables.** One fact table with 60,000 sales and four dimensions, reset from the CSV files on each full run.
+```bash
+docker compose --profile etl run --rm etl
+```
 
-staging etl.extract()
-
-**Snapshot copy.** No logic here, so the stage is a true copy of the source. The original sale categories are loaded beside it for audit.
-
-transformed etl.transform()
-
-**Fixes and gates.** Applies the rules, then raises an exception instead of emitting bad data.
-
-clean etl.load()
-
-**Published schema.** Primary keys, foreign keys and CHECK constraints, a reporting view, and column comments that define revenue.
-
-Rule tables read by transform
-
-- product_category_map
-- quantity_rules
-- pricing_rules
-- decision_log
-
-Each stage is a PL/pgSQL function. The whole run starts with one command: `docker compose --profile etl run --rm etl`. Database credentials are Docker secrets, never environment variables in git.
-
-### What the source data got wrong, and what the pipeline did
+### What the source data got wrong
 
 | Problem | Found in source | After the pipeline |
-| --- | --- | --- |
-| Month names in the date table | ✕**667** of 730 dates wrong | ✓Rebuilt from the date itself. The run fails, and a CHECK constraint rejects any mismatch. |
-| Product cost above list price | ✕**313** of 400 products (78%) | ✓0 loss-making products. Prices come from a rules table, and a CHECK constraint blocks negative margin. |
-| Revenue that disagrees with quantity × price × (1 − discount) | ✕Differs on **99.9%** of sales | ✓0 mismatches after the pricing repair. The official formula is stored as a column comment in the database. |
-| Duplicate customers | ✕**5** records share an email and name with another | ✓Merged into the record with the most orders, and the orders are re-pointed to it. Same email with a different name goes to a review table instead of being merged. |
+|---|---|---|
+| Month names in the date table | **667 of 730** dates wrong | Rebuilt from the date itself; a CHECK constraint rejects any mismatch |
+| Product cost above list price | **313 of 400** products (78%) | 0 loss-making products; prices come from a rules table and a CHECK constraint blocks negative margin |
+| Revenue vs quantity × price × (1 − discount) | Differs on **99.9%** of sales | 0 mismatches after the pricing repair; the formula is stored as a column comment |
+| Duplicate customers | **5** records share an email and name | Merged into the record with the most orders; same email with a different name goes to a review table |
 
-Source counts were re-checked on the CSV files in the repository. The “after” results come from the pipeline’s own run notices and the repository documentation (docs/dataAnalytics/PricingIssueFix.md).
+> Source counts were re-checked on the repository's CSV files. The "after" results come from the pipeline's run notices and the repository documentation.
 
 ### Decisions I wrote down
 
-- RejectedDeriving each sale’s category from its product. That would have erased Apparel and Grocery, so the original 42 / 26 / 20 / 12 percent category split is kept and enforced as a gate.
-- AcceptedThe discount is a constant 35% on every row. There is nothing to clean, so it is documented as a flat-rate assumption.
-- FixedProduct prices, because 78% of products had a cost above their list price. Prices now come from a rules table, whose first values were marked as placeholders (median source cost × 1.60) until real market prices existed.
+- **Rejected:** deriving each sale's category from its product, because that would erase Apparel and Grocery. The original 42 / 26 / 20 / 12 percent split is kept and enforced as a gate.
+- **Accepted:** the discount is a constant 35% on every row, so there is nothing to clean. It is documented as a flat-rate assumption.
+- **Fixed:** product prices, because 78% of products had a cost above list price. The rules table started with placeholder values until real market prices existed.
 
 ### Replacing invented prices with market prices
 
-The source prices had no relationship to cost or product, so I wrote a Python scraper on the eBay Browse API. The first version guessed brands from listing titles and priced only **32 of 400** products. The second version asks eBay for its own Brand filter on each product, then records the median new-condition price per brand. It produced **529 brand-level prices across 387 brands**. Listings must match at least 60% of the product-name words, and cases, covers and spare parts are filtered out.
+I wrote a Python scraper on the eBay Browse API. The first version guessed brands from listing titles and priced only **32 of 400** products. The second asks eBay for its own Brand filter on each product and records the median new-condition price per brand: **529 brand-level prices across 387 brands**. Listings must match at least 60% of the product-name words, and cases, covers and spare parts are filtered out.
 
 ### Known limits and next steps
 
-- **92 of 400 products** still carry the source floor price of 5.00, because their product name ran out of distinct brands.
-- The rules table still holds placeholders. The next step is to seed it from the scraped prices so a fresh run produces good prices without the manual repair.
-- eBay prices are US-only medians of new items, so they should be read with the low and high bands that the scraper also records.
+- 92 of 400 products still carry the source floor price of 5.00.
+- The rules table still holds placeholders. Next step: seed it from the scraped prices so a fresh run produces good prices without a manual repair.
+- eBay prices are US-only medians of new items, so they should be read with the low and high bands the scraper also records.
 
-- PostgreSQL 16
-- PL/pgSQL
-- Python
-- pandas
-- SQLAlchemy
-- Docker Compose
-- Docker secrets
-- eBay Browse API
-- Git & pull requests
-
-Research · data pipeline · bachelor’s thesis
+---
 
 ## Javanese speech recognition: TDNN vs TDNN-F
 
-Sep 2025 – Jun 2026 Sanata Dharma University Thesis written in Indonesian
+*Sep 2025 – Jun 2026 · Bachelor's thesis, Sanata Dharma University (written in Indonesian)*
 
-Two acoustic models were trained on the same cleaned data and compared by character error rate. TDNN-F scored lower in all ten paired runs.
+Two acoustic models were trained on the same cleaned data and compared by character error rate (CER). **TDNN-F scored lower in all ten paired runs.**
 
 ### From raw recordings to model input
 
-1. 185,076**Recordings** in the OpenSLR Javanese corpus
-2. 18,501**Stratified 10% sample**, drawn proportionally from each speaker group
-3. 18,383**Clean transcripts** after normalization, lowercasing, punctuation and accent removal, and English-word filtering−118
-4. 17,880**Files with MFCC features** (39 values per frame). The rest were too short or in the wrong format.−503
-5. 17,858**Aligned** to words and phonemes with the Montreal Forced Aligner, which gave 17.51 hours of active speech−22
+| Step | Files | Dropped |
+|---|---:|---:|
+| OpenSLR Javanese corpus | 185,076 | |
+| Stratified 10% sample | 18,501 | |
+| Clean transcripts (normalization, accent removal, English-word filter) | 18,383 | 118 |
+| MFCC features extracted (39 values per frame) | 17,880 | 503 |
+| Aligned with the Montreal Forced Aligner (17.51 hours of speech) | 17,858 | 22 |
 
-before`Ing sawetara kÃ©wan gulu bisa tuwuh dawa upamanÃ© gulu jerapah`
-
-after`ing sawetara kewan gulu bisa tuwuh dawa upamane gulu jerapah`
-
-The sample is a transcript from the thesis’s preprocessing table. In the raw text, accented letters appear as garbled characters, and cleaning reduces them to plain letters. The cleaned data was split 80:20 into training and test sets.
+The cleaned data was split 80:20 into training and test sets with a fixed random seed.
 
 ### Results
 
-TDNN-F has the lower error rate in every one of the 10 paired runs
+| | TDNN-F | TDNN |
+|---|---:|---:|
+| Best run (CER) | **33.80%** | 39.50% |
+| Average of 10 runs | **35.99%** | 43.06% |
+| Spread, best to worst run | 3.88 points | 6.43 points |
 
-TDNN TDNN-F
+A paired t-test gives **p = 0.000149** (t = 6.255, 9 degrees of freedom), after a Shapiro-Wilk normality check on both sets of results.
 
-RunCharacter error rate (%)Gap
+<details>
+<summary>All ten runs</summary>
 
-1
-
-best 33.80
-
-−12.09
-
-2
-
-−6.37
-
-3
-
-−10.06
-
-4
-
-−4.21
-
-5
-
-−10.28
-
-6
-
-−11.43
-
-7
-
-−6.11
-
-8
-
-−4.02
-
-9
-
-−3.53
-
-10
-
-best 39.50
-
-−2.59
-
-30 35 40 45
-
-Character error rate on held-out test data, in percent. Lower is better. Each run is one random-search tuning configuration per model; the gap is in percentage points.
-
-Best run
-
-33.80% vs 39.50%TDNN-F vs TDNN
-
-Average of 10 runs
-
-35.99% vs 43.06%TDNN-F also varied less: 3.88 points from best to worst run, against 6.43 for TDNN.
-
-Paired t-test
-
-p = 0.000149t = 6.255 with 9 degrees of freedom. Both sets of results passed a Shapiro-Wilk normality check first.
-
-Show the numbers as a table
-
-| Run | TDNN % | TDNN-F % | Gap |
-| --- | --- | --- | --- |
+| Run | TDNN % | TDNN-F % | Gap (points) |
+|---:|---:|---:|---:|
 | 1 | 45.89 | 33.80 | 12.09 |
 | 2 | 43.97 | 37.60 | 6.37 |
 | 3 | 45.26 | 35.20 | 10.06 |
@@ -187,80 +127,52 @@ Show the numbers as a table
 | 9 | 41.21 | 37.68 | 3.53 |
 | 10 | 39.50 | 36.91 | 2.59 |
 
+Each run is one random-search tuning configuration per model. Lower CER is better.
+
+</details>
+
 ### What the data showed
 
-- **51.6% of the 20,127 unique words appear only once** in the corpus (10,391 words), so most of the vocabulary has too few examples to learn from.
-- **Javanese-specific sounds are rare.** /ch/, /dh/, /ny/ and /th/ each make up under 1% of phonemes. The thesis names this imbalance as a likely contributor to the high error rate.
-- **The corpus is small.** 17.51 hours of speech, against roughly 740 to 755 hours in the Korean and Mandarin studies the thesis compares with, and no pre-trained Javanese model for the aligner.
+- **51.6% of the 20,127 unique words appear only once**, so most of the vocabulary has too few examples to learn from.
+- **Javanese-specific sounds are rare.** /ch/, /dh/, /ny/ and /th/ each make up under 1% of phonemes, which the thesis names as a likely contributor to the high error rate.
+- **The corpus is small:** 17.51 hours, against roughly 740 to 755 hours in the Korean and Mandarin studies it compares with.
 - **Training was expensive.** One run took 303 to 2,544 minutes on a single NVIDIA RTX A4500, which is why each model got 10 random-search runs instead of a full grid.
 
-- Python
-- MFCC
-- Montreal Forced Aligner
-- LDA
-- TDNN / TDNN-F
-- N-gram language model
-- Random search
-- Paired t-test
-
-Team web application · five members
+---
 
 ## Podomoro Laundry Management System
 
-Sep – Dec 2024 Laravel 11 · PHP 8.2 · MySQL / SQLite · Tailwind CSS · Alpine.js [Repository](https://github.com/Menjadianjay/Podomoro-Laundry)
+*Sep – Dec 2024 · Team of five · [Repository](https://github.com/Menjadianjay/Podomoro-Laundry)*
 
-A laundry business ran on paper notes. Our team replaced them with one web application for taking and managing orders, and added an attendance system for the manager.
+A laundry business ran on paper notes. Our team replaced them with one Laravel web application for taking and managing orders, and added an attendance system for the manager.
 
-- **Orders:** each order records the customer, service, weight and payment method, and the total price is calculated from the service rate, so taking and managing orders is faster and more efficient than on paper.
-- **Attendance:** the manager had a hard time tracking employee attendance, so I built a staff attendance system. It allows one record per person per day, only during working hours (08:00–19:00, Asia/Jakarta time), with status, notes and an optional proof file (JPG, PNG or PDF, up to 2 MB) that managers can review, edit and delete.
+- **Orders:** each order records the customer, service, weight and payment method, and the total price is calculated from the service rate.
+- **Attendance:** I built the staff attendance system after the manager struggled to track attendance. It allows one record per person per day, only between 08:00 and 19:00 (Asia/Jakarta time), with status, notes and an optional proof file (JPG, PNG or PDF, up to 2 MB) that managers can review, edit and delete.
 - **Panels:** staff and managers log in to separate panels. The manager dashboard shows total income, transaction count and number of services, and the service catalog holds each service's type, rate and turnaround time.
 - **Interface:** paginated, responsive lists with the newest records first, a redesigned login page, and interface text translated into English.
-- **My part:** I wrote 38 of the repository's 51 commits (about 75%), merged through branches and pull requests, and contributed to the architecture and UI design. The data lives in five relational tables: users, customers, services, transactions and attendance.
+- **My part:** 38 of the repository's 51 commits (about 75%), merged through branches and pull requests, plus architecture and UI design. The data lives in five tables: users, customers, services, transactions and attendance.
 
-Skills
+`Laravel 11` `PHP 8.2` `MySQL / SQLite` `Blade` `Tailwind CSS` `Alpine.js` `Vite` `Git`
 
-## What I work with
+---
 
-### Data work
+## Skills
 
-- ETL pipelines
-- Data cleaning and validation
-- Data quality gates
-- Star schema modeling
-- Feature extraction
-- Statistical testing
+| Area | What I use |
+|---|---|
+| **Data engineering** | ETL pipeline design, staging layers, data cleaning and validation, quality gates, star schema modeling, PostgreSQL 16 (PL/pgSQL, CTEs, window functions), MySQL, SQLite |
+| **Machine learning** | MFCC features, forced alignment, LDA, TDNN / TDNN-F, N-gram language models, random-search tuning, Shapiro-Wilk and paired t-tests |
+| **Languages** | Python (pandas, SQLAlchemy, psycopg2, NumPy), SQL, PL/pgSQL, Bash, Java, JavaScript, PHP |
+| **Linux and tools** | Ubuntu, Arch Linux; shell navigation, file permissions, process management, user administration, log troubleshooting; Docker, Docker Compose, Kubernetes, systemd, Git and GitHub |
+| **Web** | Laravel 11, Blade, Eloquent ORM, Tailwind CSS, Alpine.js, HTML5, CSS3 |
 
-### Languages and libraries
+## Experience
 
-- Python
-- pandas
-- SQLAlchemy
-- SQL
-- PL/pgSQL
-- Java
-- JavaScript
-- PHP
+- **Teaching Assistant, Machine Learning** · Sanata Dharma University · Mar – Jul 2026
+- **Teaching Assistant, Object-Oriented Programming** · Sanata Dharma University · Sep – Dec 2025
 
-### Databases and tooling
+## Contact
 
-- PostgreSQL
-- MySQL
-- SQLite
-- Docker
-- Docker Compose
-- Git & GitHub
-- Laravel
+Email [josephdeornay@gmail.com](mailto:josephdeornay@gmail.com), or find me on [LinkedIn](https://www.linkedin.com/in/joseph-aprillio-7i70a0a) and [Medium](https://medium.com/@josephAprillio).
 
-### Learning next
-
-- AWS
-- PySpark
-- Airflow
-
-I have also worked as a teaching assistant for Machine Learning (Mar – Jul 2026) and Object-Oriented Programming (Sep – Dec 2025) at Sanata Dharma University, which is where I practiced explaining technical work clearly.
-
-Contact
-
-Email **josephdeornay@gmail.com**, or find me on [GitHub](https://github.com/Menjadianjay) and [LinkedIn](https://www.linkedin.com/in/joseph-aprillio-7i70a0a).
-
-Figures come from the project repository and its documentation, and from the thesis. Source-data counts for the retail project were re-checked on the repository’s CSV files.
+<sub>Figures come from the project repositories, their documentation and the thesis.</sub>
