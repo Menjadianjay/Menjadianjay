@@ -32,7 +32,7 @@
 
 </div>
 
-*This is the short list. Everything else lives below — click a category to expand it.*
+*Click a category to expand it.*
 
 <br>
 
