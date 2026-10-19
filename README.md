@@ -177,7 +177,7 @@
 
 <div align="center">
 
-[![Gmail](https://img.shields.io/badge/rio8i2004@gmail.com-0d0d0d?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:rio8i2004@gmail.com)
+[![Gmail](https://img.shields.io/badge/rio8i2004@gmail.com-0d0d0d?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:josephdeornay@gmail.com)
 [![Instagram](https://img.shields.io/badge/@apriliodeornay-0d0d0d?style=for-the-badge&logo=instagram&logoColor=E4405F)](https://instagram.com/apriliodeornay)
 [![LeetCode](https://img.shields.io/badge/rionewbieiseng2-0d0d0d?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/rionewbieiseng2)
 
