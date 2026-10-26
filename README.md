@@ -11,11 +11,9 @@
 ## Currently Building
 
 <br>
-**Data Engineering** learning tools and skills related and currently used in Data Engineering Field.
+**Data Engineering** Learning tools and skills related and currently used in Data Engineering Field.
 <br>
 **Retail Analytics** combining machine learning and user experience of exploring possibilities in different scheme of retail data.
-
-
 <br>
 
 ## Core Stack
