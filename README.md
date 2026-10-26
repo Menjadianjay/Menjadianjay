@@ -10,9 +10,8 @@
 
 ## Currently Building
 
-**ASR for Javanese Speech** combining a Telegram bot with an interactive scrollytelly experience to make Automatic Speech Recognition for a low-resource language more accessible and engaging.
 <br>
-**International Trade & Export-Import Analysis** studying global trade through import and export data, trade patterns, market dynamics, and the factors influencing international business.
+**Data Engineering** learning tools and skills related and currently used in Data Engineering Field.
 <br>
 **Retail Analytics** combining machine learning and user experience of exploring possibilities in different scheme of retail data.
 
